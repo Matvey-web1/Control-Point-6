@@ -1,0 +1,42 @@
+.content {
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 25% auto 15%;
+    grid-template-areas: 
+    "nav header header"
+    "nav content ads"
+    "nav footer ads"
+    ;
+}
+
+.header {
+    grid-area: header;
+    background-color: lightskyblue;
+    font-size: 60px;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: lightgreen;
+}
+
+.ads {
+    grid-area: ads;
+    background-color: palevioletred;
+}
+
+.content {
+    grid-area: content;
+    background-color: cadetblue;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: aqua;
+    font-size: 60px;
+}
+
+header footer {
+    min-height: 50px;
+}
+

@@ -1,0 +1,186 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    background-color: rgb(50, 50, 50);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: white;
+    margin: 20px;
+}
+
+.scroll {
+    height: 590px;
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    padding: 0 20px;
+    align-items: center;
+}
+
+/* Базовые группы (2 колонки) */
+.group {
+    display: grid;
+    height: 580px;
+    width: 210px;
+    gap: 10px;
+    flex-shrink: 0;
+    grid-template-columns: repeat(2, 100px);
+    grid-auto-rows: 108px;
+}
+
+/* Группы с 4 колонками */
+.group3, .group6 {
+    width: 420px;
+    grid-template-columns: repeat(4, 100px);
+}
+
+/* Стили для элементов в 2-колоночных группах */
+.small {
+    height: 108px;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.medium {
+    height: 108px;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.big {
+    height: 221px;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Стили для элементов в 4-колоночных группах */
+.small3 {
+    height: 108px;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.medium3 {
+    height: 108px;
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Настройки для каждой группы */
+.group1 {
+    grid-template-rows: repeat(5, 108px);
+}
+
+.group1 > :nth-child(5) {
+    grid-column: span 2;
+}
+
+.group2 {
+    grid-template-rows: repeat(4, 108px);
+    align-content: start;
+}
+
+.group2 > :nth-child(3) {
+    grid-column: span 2;
+}
+
+.group3 {
+    grid-template-rows: repeat(4, 108px);
+    direction: rtl;
+}
+
+.group3 > :nth-child(9) {
+    grid-column: span 2;
+}
+
+.group3 > :nth-child(14) {
+    grid-column: span 2;
+}
+
+.group4 {
+    grid-template-rows: repeat(5, 108px);
+    direction: rtl;
+}
+
+.group4 > :nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.group5 {
+    grid-template-rows: repeat(5, 108px);
+}
+
+.group5 > :nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.group6 {
+    grid-template-rows: repeat(4, 108px);
+}
+
+.group6 > :nth-child(9) {
+    grid-column: span 2;
+}
+
+.group6 > :nth-child(14) {
+    grid-column: span 2;
+}
+
+.group7 {
+    grid-template-rows: repeat(4, 108px);
+    align-content: start;
+    direction: rtl;
+}
+
+.group7 > :nth-child(3) {
+    grid-column: span 2;
+}
+
+.group8 {
+    grid-template-rows: repeat(5, 108px);
+}
+
+.group8 > :nth-child(5) {
+    grid-column: span 2;
+}
+
+/* Цветовые стили (остаются без изменений) */
+.group1 > div {
+    background-color: hsl(233 100% 60%);
+}
+
+.group2 > div {
+    background-color: #881FDE;
+}
+
+.group3 > div {
+    background-color: rgb(219, 138, 219);
+}
+
+.group4 > div {
+    background-color: rgb(201, 30, 200);
+}
+
+.group5 > div {
+    background-color: rgb(201, 30, 87);
+}
+
+.group6 > div {
+    background-color: rgb(190, 190, 20);
+}
+
+.group7 > div {
+    background-color: rgb(19, 191, 163);
+}
+
+.group8 > div {
+    background-color: rgb(220, 224, 161);
+}
