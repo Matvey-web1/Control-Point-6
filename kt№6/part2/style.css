@@ -32,6 +32,7 @@ h1, h2 {
     flex-shrink: 0;
     grid-template-columns: repeat(2, 100px);
     grid-auto-rows: 108px;
+    grid-auto-flow: dense; /* Заполняем дырки! */
 }
 
 /* Группы с 4 колонками */
@@ -73,83 +74,23 @@ h1, h2 {
 }
 
 /* Настройки для каждой группы */
-.group1 {
-    grid-template-rows: repeat(5, 108px);
-}
-
-.group1 > :nth-child(5) {
-    grid-column: span 2;
-}
+/* Теперь не нужно явно задавать grid-template-rows, так как grid-auto-flow: dense сам расставит */
 
 .group2 {
-    grid-template-rows: repeat(4, 108px);
     align-content: start;
-}
-
-.group2 > :nth-child(3) {
-    grid-column: span 2;
 }
 
 .group3 {
-    grid-template-rows: repeat(4, 108px);
     direction: rtl;
-}
-
-.group3 > :nth-child(9) {
-    grid-column: span 2;
-}
-
-.group3 > :nth-child(14) {
-    grid-column: span 2;
 }
 
 .group4 {
-    grid-template-rows: repeat(5, 108px);
     direction: rtl;
-}
-
-.group4 > :nth-child(3) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.group5 {
-    grid-template-rows: repeat(5, 108px);
-}
-
-.group5 > :nth-child(5) {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.group6 {
-    grid-template-rows: repeat(4, 108px);
-}
-
-.group6 > :nth-child(9) {
-    grid-column: span 2;
-}
-
-.group6 > :nth-child(14) {
-    grid-column: span 2;
 }
 
 .group7 {
-    grid-template-rows: repeat(4, 108px);
     align-content: start;
     direction: rtl;
-}
-
-.group7 > :nth-child(3) {
-    grid-column: span 2;
-}
-
-.group8 {
-    grid-template-rows: repeat(5, 108px);
-}
-
-.group8 > :nth-child(5) {
-    grid-column: span 2;
 }
 
 /* Цветовые стили (остаются без изменений) */
